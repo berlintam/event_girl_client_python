@@ -12,8 +12,8 @@ def send_event(url, api_token, title):
 
     Usage::
 
-        >>> import eg_client
-        >>> eg_client.send_event(
+        >>> import eventgirl
+        >>> eventgirl.send_event(
                 url="http://yoururl.com/incoming_events.json",
                 api_token="your_api_token",
                 title="Your Title"
@@ -25,5 +25,4 @@ def send_event(url, api_token, title):
     }
     headers = {'content-type': 'application/json'}
     ret = requests.post(url, data=json.dumps(payload), headers=headers)
-
     return ret
